@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import {Nav, Content, Elements} from './containers'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const S = {
+  View: styled.div`
+  display: flex;
+  flex-direction: column;
+  `,
 }
 
-export default App;
+const App = () => {
+  return (
+    <S.View>
+      <Nav/>
+      <Content/>
+      <Elements/>
+    </S.View>
+  )
+}
+
+export default App
