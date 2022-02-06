@@ -11,10 +11,10 @@ const S = {
     `,
 }
 
-const NavLogo = ({LogoName, link}) => {
+const NavLogoComponent = ({LogoName, link}) => {
     return (
         <S.NavLogo href = {link}>{LogoName}</S.NavLogo>
     )
 }
 
-export default NavLogo
+export default NavLogoComponent

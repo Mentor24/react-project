@@ -9,9 +9,9 @@ const S = {
     align-items: center;
     justify-content: center;
     height: 90vh;
-    background-color: green;
     background-image: url(${wallpaper});
     background-size: cover;
+    min-width: 1024px;
     `,
 
   Title: styled.h1`

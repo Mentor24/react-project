@@ -1,5 +1,6 @@
-export { default as NavLogo } from './NavLogo'
+export { default as NavLogoComponent } from './NavLogoComponent'
 export { default as NavComponent } from './NavComponent'
 export { default as StyledButton } from './Button'
 export { default as StyledTextField } from './TextField'
-export { default as ElementBox } from './ElementBox'
+export { default as AboutMeComponent } from './AboutMeComponent'
+export { default as StopWatchComponent } from './StopWatchComponent'

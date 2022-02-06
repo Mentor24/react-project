@@ -6,6 +6,14 @@ const S = {
     font-size: 19px;
     text-decoration: none;
     color: black;
+
+    &:hover {
+    opacity: 0.7;
+    }
+    
+    &:active {
+    opacity: 0.5;
+    }
     `
 }
 
