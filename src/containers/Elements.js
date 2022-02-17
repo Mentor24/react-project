@@ -24,7 +24,7 @@ const S = {
     display: flex;
     justify-content: center;
     background-color: #f0f0f0;
-    min-width: 1024px;
+    min-width: 768px;
   `,
 
   InsideWrapper: styled.div`
@@ -32,7 +32,19 @@ const S = {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 75%;
+    width: 70%;
+
+    @media screen and (max-width: 1440px){
+      width: 80%;
+    }
+
+    @media screen and (max-width: 1024px){
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
   `,
 
   ElementBox: styled.div`

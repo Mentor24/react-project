@@ -11,7 +11,7 @@ const S = {
     height: 90vh;
     background-image: url(${wallpaper});
     background-size: cover;
-    min-width: 1024px;
+    min-width: 768px;
     `,
 
   Title: styled.h1`

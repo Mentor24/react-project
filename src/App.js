@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { NavLogoComponent, NavComponent } from './components'
 import { Home, AboutMe, Stopwatch, Counter, CharacterList, Registration, Login, ErrorPage } from './pages'
+import React, {useState} from 'react'
+import ReorderIcon from '@mui/icons-material/Reorder';
 
 const S = {
   Nav: styled.div`
@@ -14,29 +16,62 @@ const S = {
     width: 100%;
     z-index: 2;
     box-shadow: 0px 1px 5px black;
-    min-width: 1024px;
+    min-width: 768px;
+
+    > button {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px){
+      > button {
+        display: flex;
+        }
+      }
+    }
+
   `,
 
   Logo: styled.span`
-    padding-left: 10%;
+    margin-left: 10%;
   `,
 
   Menu: styled.div`
-    padding-right: 10%;
+    margin-right: 5%;
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    width: 40%;
+
+    @media screen and (max-width: 1366px){
+      width: 60%;
+      margin-right: 2%;
+    }
+
+    @media screen and (max-width: 1024px){
+      width: 70%;
+      margin-right: 0%;
+    }
+
+    @media screen and (max-width: 768px){
+      display: none;
+    }
+  `,
+
+  Button: styled.button`
+    margin-right: 10%;
   `,
 }
 
 const App = () => {
+
+const [showMenu, setShowMenu] = useState(true);
+
   return (
     <Router>
         <S.Nav>
           <S.Logo>
             <NavLogoComponent LogoName = 'myLogo' link = '/'/>
           </S.Logo>
-          <S.Menu>
+          <S.Menu id={showMenu ? "hidden" : ""}>
             <NavComponent ComponentName = 'O mnie' link = '/AboutMe'/>
             <NavComponent ComponentName = 'Stoper' link = '/Stopwatch'/>
             <NavComponent ComponentName = 'Licznik' link = '/Counter'/>
@@ -44,6 +79,9 @@ const App = () => {
             <NavComponent ComponentName = 'Rejestracja' link = '/Registration'/>
             <NavComponent ComponentName = 'Logowanie' link = '/Login'/>
           </S.Menu>
+          <S.Button onClick={() => setShowMenu(!showMenu)}>
+            <ReorderIcon/>
+          </S.Button>
         </S.Nav>
       <Routes>
         <Route path='/' element={<Home/>}/>
