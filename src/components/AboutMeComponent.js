@@ -28,6 +28,14 @@ Description: styled.span`
     font-weight: 300;
     text-align: justify;
     width: 30%;
+
+    @media screen and (max-height: 900px){
+        width: 40%;
+    }
+
+    @media screen and (max-height: 800px){
+        width: 50%;
+    }
 `,
 }
 
