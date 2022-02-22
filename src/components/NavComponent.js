@@ -6,15 +6,15 @@ const S = {
     font-size: 19px;
     text-decoration: none;
     color: black;
-    margin-right: 20px;
+    margin-right: 25px;
     
 
     &:hover {
-    opacity: 0.7;
+        opacity: 0.7;
     }
     
     &:active {
-    opacity: 0.5;
+        opacity: 0.5;
     }
 
     @media screen and (max-width: 850px){
@@ -25,11 +25,11 @@ const S = {
             opacity: 1;
             background-color: #9fa9a3;
             color: white;
-            }
+        }
             
             &:active {
             opacity: 1;
-            }
+        }
     }
     `
 }

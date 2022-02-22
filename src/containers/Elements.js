@@ -34,7 +34,7 @@ const S = {
     flex-wrap: wrap;
     width: 70%;
 
-    @media screen and (max-width: 1440px){
+    @media screen and (max-width: 1480px){
       width: 80%;
     }
 
@@ -42,7 +42,7 @@ const S = {
       width: 100%;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 900px){
       width: 100%;
     }
   `,

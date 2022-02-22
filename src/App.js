@@ -22,22 +22,20 @@ const S = {
     }
 
     @media screen and (max-width: 850px){
-      
-    height: ${({ isClicked }) => isClicked === true ? '340px' : ''};
-    text-align: ${({ isClicked }) => isClicked === true ? 'center' : ''};
+      height: ${({ isClicked }) => isClicked === true ? '340px' : ''};
+      text-align: ${({ isClicked }) => isClicked === true ? 'center' : ''};
 
       > button {
-        display: flex;
+          display: flex;
         }
       }
     }
   `,
 
   Logo: styled.span`
-      position: absolute;
-      left: 70px;
-      top: 33px;
-      
+    position: absolute;
+    left: 70px;
+    top: 33px;
   `,
 
   Menu: styled.div`
