@@ -9,8 +9,7 @@ const S = {
   Nav: styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 10vh;
+    height: 100px;
     background-color: #f0f0f0;
     position: fixed;
     width: 100%;
@@ -22,56 +21,56 @@ const S = {
       display: none;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 850px){
+      
+    height: ${({ isClicked }) => isClicked === true ? '340px' : ''};
+    text-align: ${({ isClicked }) => isClicked === true ? 'center' : ''};
+
       > button {
         display: flex;
         }
       }
     }
-
   `,
 
   Logo: styled.span`
-    margin-left: 10%;
+      position: absolute;
+      left: 70px;
+      top: 33px;
+      
   `,
 
   Menu: styled.div`
-    margin-right: 5%;
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
+    position: absolute;
+    right: 50px;
 
-    @media screen and (max-width: 1366px){
-      width: 60%;
-      margin-right: 2%;
-    }
-
-    @media screen and (max-width: 1024px){
-      width: 70%;
-      margin-right: 0%;
-    }
-
-    @media screen and (max-width: 768px){
-      display: none;
+    @media screen and (max-width: 850px){
+      display: ${({ isClicked }) => isClicked === true ? 'flex' : 'none'};
+      flex-direction: ${({ isClicked }) => isClicked === true ? 'column' : 'none'};
+      width: ${({ isClicked }) => isClicked === true ? '100%' : ''};
+      right: 0px;
+      position: absolute;
+      top: 80px;
     }
   `,
 
   Button: styled.button`
-    margin-right: 10%;
+    position: absolute;
+    top: 33px;
+    right: 50px;
   `,
 }
 
 const App = () => {
 
-const [showMenu, setShowMenu] = useState(true);
-
+const [showMenu, setShowMenu] = useState(false);
   return (
     <Router>
-        <S.Nav>
+        <S.Nav isClicked={showMenu}>
           <S.Logo>
             <NavLogoComponent LogoName = 'myLogo' link = '/'/>
           </S.Logo>
-          <S.Menu id={showMenu ? "hidden" : ""}>
+          <S.Menu isClicked={showMenu}>
             <NavComponent ComponentName = 'O mnie' link = '/AboutMe'/>
             <NavComponent ComponentName = 'Stoper' link = '/Stopwatch'/>
             <NavComponent ComponentName = 'Licznik' link = '/Counter'/>
