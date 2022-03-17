@@ -80,7 +80,6 @@ const S = {
   LoginIcon: styled(LoginIcon)`
     && {${values}}
   `,
-
  
   Title: styled.span`
     font-size: 19px; 
