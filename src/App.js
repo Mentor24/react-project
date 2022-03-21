@@ -56,6 +56,10 @@ const S = {
     position: absolute;
     top: 33px;
     right: 50px;
+
+    
+      border: green;
+  
   `,
 }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Switch from '@mui/material/Switch';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import {InputSelect, SwitchComponent} from '../components'
 
 const S = {
   
@@ -68,19 +68,24 @@ const S = {
 
 const CharacterCards = ({character}) => {
 
-  const [checked, setChecked] = useState(false);
-  const [currentArray, setCurrentArray] = useState([]);
+  const [data, setData] = useState('All');
+  const [shift, setShift] = useState(true);
 
-  useEffect( () => {
-    setCurrentArray(checked ? AliveCharacterArray : BasicCharacterArray)
-    
-}, [checked])
+  const characterArray = character
+  
+  .sort((a,b) => {
+    if (shift) return a.name.localeCompare(b.name)
+    else if (!shift) return b.name.localeCompare(a.name)
+  })
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
-  const BasicCharacterArray = character.map(item => {
+  .filter(item => {
+    if (data === 'All') return item
+    else if (item.status === 'Alive' && data === 'Alive') return item
+    else if (item.status === 'Dead' && data === 'Dead') return item
+    else if (item.status === 'unknown' && data === 'unknown') return item
+  })
+  
+  .map(item => {
     return (
       <S.Box>
         <S.Image src = {item.image}/>
@@ -96,31 +101,15 @@ const CharacterCards = ({character}) => {
       </S.Box>
     )
   })
-
-  const AliveCharacterArray = character.filter(item => item.status === 'Alive').map(item => {
-    return (
-      <S.Box>
-        <S.Image src = {item.image}/>
-        <S.Name>{item.name}</S.Name>
-        <S.Status>
-          <S.Text>Status: </S.Text> 
-          {item.status}
-        </S.Status>
-        <S.Status>
-          <S.Text>Species: </S.Text> 
-          {item.species}
-        </S.Status>
-      </S.Box>
-    )
-  })
- 
+  
     return (
       <S.Wrapper>
         <S.FunctionBoxes>
-          <Switch checked={checked} onChange={handleChange}/>
+          <InputSelect setData={setData}/>
+          <SwitchComponent setShift={setShift}/>
         </S.FunctionBoxes>
         <S.Array>
-         {currentArray}
+         {characterArray}
         </S.Array>
       </S.Wrapper>
     )
