@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {Content, Elements} from '../containers'
 
 const S = {
+  
   View: styled.div`
     display: flex;
     flex-direction: column;

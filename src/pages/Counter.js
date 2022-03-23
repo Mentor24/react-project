@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from '@mui/material'
 
 const S = {
+
   Wrapper: styled.div`
     background-color: #9fa9a3;
     display: flex;
@@ -42,7 +43,6 @@ const Counter = () => {
         <S.StyledButton onClick={() => setNumber(0)}>Reset</S.StyledButton>
         )}
       </S.InsideWrapper>
-
     </S.Wrapper>
   );
 };

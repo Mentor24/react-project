@@ -3,6 +3,7 @@ import wallpaper from '../images/wallpaper.jpg'
 import { StyledButton, StyledTextField } from '../components'
 
 const S = {
+  
   Content: styled.div`
     display: flex;
     flex-direction: column;

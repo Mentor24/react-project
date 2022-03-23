@@ -8,7 +8,6 @@ const S = {
     color: black;
     margin-right: 25px;
     
-
     &:hover {
         opacity: 0.7;
     }

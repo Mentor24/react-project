@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {CharacterCards, Pagination} from '../components'
+import { Pagination } from '../components'
+import { CharacterCards } from '../containers'
 import axios from 'axios';
 import styled from 'styled-components'
 

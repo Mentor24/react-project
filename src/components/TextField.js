@@ -34,6 +34,8 @@ const StyledTextField = React.forwardRef(function StyledTextField(props, ref) {
   );
 });
 
-export default function UnstyledInput({label}) {
+const UnstyledInput = ({label}) => {
   return <StyledTextField placeholder={label} />;
 }
+
+export default UnstyledInput

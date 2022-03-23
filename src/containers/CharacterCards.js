@@ -84,7 +84,7 @@ const CharacterCards = ({character}) => {
     else if (item.status === 'Dead' && data === 'Dead') return item
     else if (item.status === 'unknown' && data === 'unknown') return item
   })
-  
+   
   .map(item => {
     return (
       <S.Box>

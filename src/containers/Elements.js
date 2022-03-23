@@ -20,6 +20,7 @@ const values = css`
 `;
 
 const S = {
+  
   Elements: styled.div`
     display: flex;
     justify-content: center;
@@ -155,7 +156,6 @@ const newElementsArray = ElementsArray.map((item) => {
   </S.ElementBox>
     )
 })
-
     return (
       <S.Elements>
         <S.InsideWrapper>

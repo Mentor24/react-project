@@ -6,6 +6,7 @@ import React, {useState} from 'react'
 import ReorderIcon from '@mui/icons-material/Reorder';
 
 const S = {
+  
   Nav: styled.div`
     display: flex;
     align-items: center;
@@ -56,10 +57,8 @@ const S = {
     position: absolute;
     top: 33px;
     right: 50px;
-
-    
-      border: green;
-  
+    border: black;
+    cursor: pointer;
   `,
 }
 
