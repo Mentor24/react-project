@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import React, {useState} from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 import { NavLogoComponent, NavComponent } from './components'
 import { Home, AboutMe, Stopwatch, Counter, CharacterList, Registration, Login, ErrorPage } from './pages'
-import React, {useState} from 'react'
 import ReorderIcon from '@mui/icons-material/Reorder';
 
 const S = {
@@ -15,7 +16,7 @@ const S = {
     position: fixed;
     width: 100%;
     z-index: 2;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 5px #000000;
     min-width: 768px;
 
     > button {
@@ -23,8 +24,8 @@ const S = {
     }
 
     @media screen and (max-width: 850px){
-      height: ${({ isClicked }) => isClicked === true ? '340px' : ''};
-      text-align: ${({ isClicked }) => isClicked === true ? 'center' : ''};
+      height: ${({ isClicked }) => isClicked ? '340px' : ''};
+      text-align: ${({ isClicked }) => isClicked ? 'center' : ''};
 
       > button {
           display: flex;
@@ -57,7 +58,7 @@ const S = {
     position: absolute;
     top: 33px;
     right: 50px;
-    border: black;
+    border: #000000;
     cursor: pointer;
   `,
 }
@@ -69,15 +70,15 @@ const [showMenu, setShowMenu] = useState(false);
     <Router>
         <S.Nav isClicked={showMenu}>
           <S.Logo>
-            <NavLogoComponent LogoName = 'myLogo' link = '/'/>
+            <NavLogoComponent logoName = 'myLogo' link = '/'/>
           </S.Logo>
           <S.Menu isClicked={showMenu}>
-            <NavComponent ComponentName = 'O mnie' link = '/AboutMe'/>
-            <NavComponent ComponentName = 'Stoper' link = '/Stopwatch'/>
-            <NavComponent ComponentName = 'Licznik' link = '/Counter'/>
-            <NavComponent ComponentName = 'Lista postaci' link = '/CharacterList'/>
-            <NavComponent ComponentName = 'Rejestracja' link = '/Registration'/>
-            <NavComponent ComponentName = 'Logowanie' link = '/Login'/>
+            <NavComponent componentName = 'O mnie' link = '/AboutMe'/>
+            <NavComponent componentName = 'Stoper' link = '/Stopwatch'/>
+            <NavComponent componentName = 'Licznik' link = '/Counter'/>
+            <NavComponent componentName = 'Lista postaci' link = '/CharacterList'/>
+            <NavComponent componentName = 'Rejestracja' link = '/Registration'/>
+            <NavComponent componentName = 'Logowanie' link = '/Login'/>
           </S.Menu>
           <S.Button onClick={() => setShowMenu(!showMenu)}>
             <ReorderIcon/>

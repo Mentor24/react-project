@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import styled from 'styled-components'
+
+import { InputLabel, MenuItem, FormControl, Select } from '@mui/material';
 
 const S = {
 
@@ -12,7 +10,7 @@ const S = {
     hight: 50px;
     background-color: #f0f0f0;
     border-radius: 5px;
-    box-shadow: 6px 8px 24px black;
+    box-shadow: 6px 8px 24px #000000;
     `,
 }
 

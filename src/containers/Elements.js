@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import PinIcon from '@mui/icons-material/Pin';
 import TimerIcon from '@mui/icons-material/Timer';
@@ -97,7 +98,7 @@ const S = {
 
   Link: styled.a`
     text-decoration: none;
-    color: black;
+    color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;

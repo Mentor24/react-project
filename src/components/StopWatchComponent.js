@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+
 import { Button } from '@mui/material'
 
 const S = {
@@ -24,8 +25,8 @@ const S = {
   StyledButton: styled(Button)`
     && {
       margin: 1%;
-      color: black;
-      border: solid black 1px;
+      color: #000000;
+      border: solid #000000 1px;
     `,
 };
 

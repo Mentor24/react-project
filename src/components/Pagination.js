@@ -15,14 +15,14 @@ const S = {
     margin: 30px 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    box-shadow: 6px 8px 24px black;
+    box-shadow: 6px 8px 24px #000000;
 
     &:hover {
-        box-shadow: 6px 8px 24px 5px black;
+        box-shadow: 6px 8px 24px 5px #000000;
       }
     
     &:active {
-        box-shadow: 6px 8px 24px 10px black;
+        box-shadow: 6px 8px 24px 10px #000000;
       }
   `
 }

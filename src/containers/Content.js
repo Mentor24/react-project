@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import wallpaper from '../images/wallpaper.jpg'
 import { StyledButton, StyledTextField } from '../components'
 
@@ -32,7 +33,7 @@ const Content = () => {
           <S.Title>Przykładowy tytuł strony internetowej</S.Title>
           <S.Description>Przykładowy opis strony internetowej</S.Description>
           <StyledTextField label = 'Szukaj...'/>
-          <StyledButton ButtonText = 'Szukaj'/>
+          <StyledButton buttonText = 'Szukaj'/>
         </S.Content>
     )
 }

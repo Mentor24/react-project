@@ -7,13 +7,13 @@ const S = {
     letter-spacing: 5px; 
     font-weight: 700;
     text-decoration: none;
-    color: black;
+    color: #000000;
     `,
 }
 
-const NavLogoComponent = ({LogoName, link}) => {
+const NavLogoComponent = ({logoName, link}) => {
     return (
-        <S.NavLogo href = {link}>{LogoName}</S.NavLogo>
+        <S.NavLogo href = {link}>{logoName}</S.NavLogo>
     )
 }
 

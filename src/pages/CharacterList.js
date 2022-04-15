@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Pagination } from '../components'
-import { CharacterCards } from '../containers'
 import axios from 'axios';
 import styled from 'styled-components'
+
+import { Pagination } from '../components'
+import { CharacterCards } from '../containers'
+
 
 const S = {
 

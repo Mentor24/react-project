@@ -37,12 +37,12 @@ Description: styled.span`
 `,
 }
 
-const AboutMeComponent = ({Image, Personals, Description}) => {
+const AboutMeComponent = ({image, personals, description}) => {
     return (
         <S.Wrapper>
-            <S.Circle src= {Image}/>
-            <S.Personals>{Personals}</S.Personals>
-            <S.Description>{Description}</S.Description>
+            <S.Circle src= {image}/>
+            <S.Personals>{personals}</S.Personals>
+            <S.Description>{description}</S.Description>
         </S.Wrapper>
     )
 }

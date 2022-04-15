@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+
 import { Button } from '@mui/material'
 
 const S = {
@@ -19,14 +20,14 @@ const S = {
   
   Number: styled.span`
     font-size: 150px;
-    color: ${({ num }) => (num % 5 === 0 ? "green" : "black")};
+    color: ${({ num }) => (num % 5 === 0 ? "#008000" : "#000000")};
   `,
 
   StyledButton: styled(Button)`
     && {
       margin: 1%;
-      color: black;
-      border: solid black 1px;
+      color: #000000;
+      border: solid #000000 1px;
     `,
 };
 

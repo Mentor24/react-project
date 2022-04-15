@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Button } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -16,16 +17,16 @@ const S = {
   StyledButton: styled(Button)`
     && {
       margin: 1%;
-      color: black;
-      border: solid black 1px;
+      color: #000000;
+      border: solid #000000 1px;
       opacity: 0.7;
     `,
   }
 
-const StyledButton = ({ButtonText}) => {
+const StyledButton = ({buttonText}) => {
     return (
       <ThemeProvider theme={theme}>
-        <S.StyledButton variant="contained"  >{ButtonText}</S.StyledButton>
+        <S.StyledButton variant="contained"  >{buttonText}</S.StyledButton>
       </ThemeProvider>
     )
     }

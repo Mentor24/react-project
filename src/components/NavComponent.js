@@ -5,7 +5,7 @@ const S = {
   NavComponent: styled.a`
     font-size: 19px;
     text-decoration: none;
-    color: black;
+    color: #000000;
     margin-right: 25px;
     
     &:hover {
@@ -23,7 +23,7 @@ const S = {
         &:hover {
             opacity: 1;
             background-color: #9fa9a3;
-            color: white;
+            color: #FFFFFF;
         }
             
             &:active {
@@ -33,9 +33,9 @@ const S = {
     `
 }
 
-const NavComponent = ({ComponentName, link}) => {
+const NavComponent = ({componentName, link}) => {
     return (
-        <S.NavComponent href = {link}>{ComponentName}</S.NavComponent>
+        <S.NavComponent href = {link}>{componentName}</S.NavComponent>
     )
 }
 
