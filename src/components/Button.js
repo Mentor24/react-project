@@ -26,7 +26,7 @@ const S = {
 const StyledButton = ({buttonText}) => {
     return (
       <ThemeProvider theme={theme}>
-        <S.StyledButton variant="contained"  >{buttonText}</S.StyledButton>
+        <S.StyledButton variant="contained">{buttonText}</S.StyledButton>
       </ThemeProvider>
     )
     }

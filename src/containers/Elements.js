@@ -106,61 +106,57 @@ const S = {
   `
 }
 
-const Elements = () => {
-
-  const ElementsArray = [
-    {
-      Icon: <S.AccessibilityNewIcon/>,
-      Title: 'O mnie',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../AboutMe',
-    },
-    {
-      Icon: <S.TimerIcon/>,
-      Title: 'Stoper',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../Stopwatch',
-    },
-    {
-      Icon: <S.PinIcon/>,
-      Title: 'Licznik',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../Counter',
-    },    
-    {
-      Icon: <S.FormatListBulletedIcon/>,
-      Title: 'Lista Postaci',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../CharacterList',
-    },    
-    {
-      Icon: <S.AppRegistrationIcon/>,
-      Title: 'Rejestracja',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../Registration',
-    },    
-    {
-      Icon: <S.LoginIcon/>,
-      Title: 'Logowanie',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      Link: '../Login',
-    }, 
+const ELEMENTS_ARRAY = [
+  {
+    icon: <S.AccessibilityNewIcon/>,
+    title: 'O mnie',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../AboutMe',
+  },
+  {
+    icon: <S.TimerIcon/>,
+    title: 'Stoper',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../Stopwatch',
+  },
+  {
+    icon: <S.PinIcon/>,
+    title: 'Licznik',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../Counter',
+  },    
+  {
+    icon: <S.FormatListBulletedIcon/>,
+    title: 'Lista Postaci',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../CharacterList',
+  },    
+  {
+    icon: <S.AppRegistrationIcon/>,
+    title: 'Rejestracja',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../Registration',
+  },    
+  {
+    icon: <S.LoginIcon/>,
+    title: 'Logowanie',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: '../Login',
+  }, 
 ]
 
-const newElementsArray = ElementsArray.map((item) => {
-  
-  return (
-  <S.ElementBox>
-    <S.Link href = {item.Link}>{item.Icon}</S.Link>
-    <S.Title>{item.Title}</S.Title>
-    <S.Description>{item.Description}</S.Description>
-  </S.ElementBox>
-    )
-})
+const Elements = () => {
     return (
       <S.Elements>
         <S.InsideWrapper>
-            {newElementsArray}
+          {ELEMENTS_ARRAY.map(({icon, title, description, link}) => {
+            return(
+              <S.ElementBox>
+                <S.Link href = {link}>{icon}</S.Link>
+                <S.Title>{title}</S.Title>
+                <S.Description>{description}</S.Description>
+              </S.ElementBox> 
+          )})}
         </S.InsideWrapper>
       </S.Elements>
     )

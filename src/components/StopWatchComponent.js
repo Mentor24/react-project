@@ -49,12 +49,17 @@ const StopWatchComponent = ({timeLeap, startFrom}) => {
 
   }, [timerOn])
 
+  const hours = ('0' + Math.floor(timeLeap*time / 60000) % 60 ).slice(-2)
+  const minutes = ('0' + timeLeap*Math.floor(time / 1000) % 60 ).slice(-2)
+  const seconds = ('0' + timeLeap*Math.floor(time / 10) % 100 ).slice(-2)
+  
+
   return (
     <S.Wrapper>
         <S.InsideWrapper>
-        <S.Time>{('0' + Math.floor(timeLeap*time / 60000) % 60 ).slice(-2)}:</S.Time>
-        <S.Time>{('0' + timeLeap*Math.floor(time / 1000) % 60 ).slice(-2)}:</S.Time>
-        <S.Time>{('0' + timeLeap*Math.floor(time / 10) % 100 ).slice(-2)}</S.Time>
+        <S.Time>{hours}:</S.Time>
+        <S.Time>{minutes}:</S.Time>
+        <S.Time>{seconds}</S.Time>
         </S.InsideWrapper>
 
         <S.InsideWrapper>
@@ -67,11 +72,10 @@ const StopWatchComponent = ({timeLeap, startFrom}) => {
         )}
 
         {!timerOn && time > 0 && (
-        <S.StyledButton onClick={() => setTimerOn(true)}>Resume</S.StyledButton>
-        )}
-        
-        {!timerOn && time > 0 && (
-        <S.StyledButton onClick={() => setTime(0)}>Reset</S.StyledButton>
+          <>
+            <S.StyledButton onClick={() => setTimerOn(true)}>Resume</S.StyledButton>
+            <S.StyledButton onClick={() => setTime(0)}>Reset</S.StyledButton>
+          </>
         )}
         </S.InsideWrapper>
     </S.Wrapper>
