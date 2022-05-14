@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Pagination } from '../components'
 import { CharacterCards } from '../containers'
-
+import { ColorLensOutlined } from "@mui/icons-material";
 
 const S = {
 

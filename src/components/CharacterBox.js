@@ -14,6 +14,7 @@ const S = {
     background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 6px 8px 24px #000000;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 6px 8px 24px 5px #000000;
@@ -49,7 +50,7 @@ const CharacterBox = ({image, name, status, species, id}) => {
   const navigate = useNavigate()
 
     return (
-            <S.Box onClick={() => navigate(`/CharacterList/${name}/${id}`)}>
+            <S.Box onClick={() => navigate(`/CharacterList/${id}`)}>
               <S.Image src = {image}/>
               <S.Name>{name}</S.Name>
               <S.Status>

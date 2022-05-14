@@ -103,7 +103,7 @@ const ROUTING_PATHS = [
         element: <ErrorPage/>,
     },
     {
-        path: '/CharacterList/:name/:id',
+        path: '/CharacterList/:id',
         element: <CharacterInfo/>,
   },
 ]
