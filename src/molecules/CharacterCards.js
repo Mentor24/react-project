@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React, { useState } from "react";
 
-import {InputSelect, SwitchComponent, CharacterBox} from '../components'
+import {InputSelect, SwitchComponent, CharacterBox} from '../atoms'
 
 
 const S = {

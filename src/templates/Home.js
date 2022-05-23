@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {Content, Elements} from '../containers'
+import {Content, Elements} from '../molecules'
 
 const S = {
   

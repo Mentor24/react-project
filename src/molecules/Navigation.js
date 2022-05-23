@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import React, {useState} from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-import { NavLogoComponent, NavComponent } from '../components'
-import { Home, AboutMe, Stopwatch, Counter, CharacterList, Registration, Login, ErrorPage, CharacterInfo } from '../pages'
+import { NavLogoComponent, NavComponent } from '../atoms'
+import { Home, AboutMe, Stopwatch, Counter, CharacterList, Registration, Login, ErrorPage, CharacterInfo } from '../templates'
 import ReorderIcon from '@mui/icons-material/Reorder';
 
 const S = {

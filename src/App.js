@@ -1,4 +1,4 @@
-import { Navigation } from './containers'
+import { Navigation } from './molecules'
 
 
 const App = () => {

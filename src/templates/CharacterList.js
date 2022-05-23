@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import styled from 'styled-components'
 
-import { Pagination } from '../components'
-import { CharacterCards } from '../containers'
-import { ColorLensOutlined } from "@mui/icons-material";
+import { Pagination } from '../atoms'
+import { CharacterCards } from '../molecules'
 
 const S = {
 

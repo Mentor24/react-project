@@ -1,4 +1,4 @@
-import StopWatchComponent from '../components/StopWatchComponent'
+import StopWatchComponent from '../atoms/StopWatchComponent'
 
 const Stopwatch = () => {
   

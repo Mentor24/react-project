@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import wallpaper from '../images/wallpaper.jpg'
-import { StyledButton, StyledTextField } from '../components'
+import { StyledButton, StyledTextField } from '../atoms'
 
 const S = {
   

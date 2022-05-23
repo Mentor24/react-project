@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import AboutMeComponent from '../components/AboutMeComponent'
+import AboutMeComponent from '../atoms/AboutMeComponent'
 import MB from '../images/MB.png'
 
 
