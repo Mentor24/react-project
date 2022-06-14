@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import styled from 'styled-components'
+import {useSelector, useDispatch} from "react-redux"
+import { bindActionCreators } from "redux";
 
 import { Pagination } from '../atoms'
 import { CharacterCards } from '../molecules'
+import { actionCreators } from "../state/index";
 
 const S = {
 
@@ -22,7 +25,7 @@ const S = {
     width: 100%;
     height: 100vh;
     font-size: 30px;
-  `,
+  `, 
   }
 
 const CharacterList = () => {
@@ -31,6 +34,11 @@ const CharacterList = () => {
     const [nextPage, setNextPage] = useState()
     const [prevPage, setPrevPage] = useState()
     const [loading, setLoading] = useState(true)
+
+    const account = useSelector((state) => state.account)
+    const dispatch = useDispatch()
+
+    const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators, dispatch)
 
     useEffect( async () => {
         setLoading(true)

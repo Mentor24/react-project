@@ -49,8 +49,6 @@ const CharacterInfo = () => {
     const [status, setStatus] = useState()
     const [species, setSpecies] = useState()
 
-
-
     useEffect( async () => {
         await axios.get(`https://rickandmortyapi.com/api/character/${id}`).then(res => {
             setImage(res.data.image)
@@ -58,8 +56,6 @@ const CharacterInfo = () => {
             setGender(res.data.gender)
             setStatus(res.data.status)
             setSpecies(res.data.species)
-
-
     })
     }, [])
 
