@@ -1,18 +1,8 @@
-export const depositMoney = (amount) => {
+export const addTable = (amount) => {
     return (dispatch) => {
         dispatch({
-            type: "deposit",
+            type: "add",
             payload: amount
         })
     }
 }
-
-export const withdrawMoney = (amount) => {
-    return (dispatch) => {
-        dispatch({
-            type: "withdraw",
-            payload: amount
-        })
-    }
-}
-

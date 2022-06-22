@@ -29,16 +29,14 @@ const S = {
   }
 
 const CharacterList = () => {
-    const [character, setCharacter] = useState([])
     const [currentPage, setCurrentPage] = useState('https://rickandmortyapi.com/api/character')
     const [nextPage, setNextPage] = useState()
     const [prevPage, setPrevPage] = useState()
     const [loading, setLoading] = useState(true)
 
-    const account = useSelector((state) => state.account)
+    const reduxTable = useSelector((state) => state.table)
     const dispatch = useDispatch()
-
-    const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators, dispatch)
+    const {addTable} = bindActionCreators(actionCreators, dispatch)
 
     useEffect( async () => {
         setLoading(true)
@@ -46,7 +44,7 @@ const CharacterList = () => {
             setLoading(false)
             setNextPage(res.data.info.next)
             setPrevPage(res.data.info.prev)
-            setCharacter(res.data.results)
+            addTable(res.data.results)
     })
     }, [currentPage])
 
@@ -64,7 +62,7 @@ const CharacterList = () => {
 
     return (
         <S.Wrapper>
-            <CharacterCards character={character}/>
+            <CharacterCards character={reduxTable}/>
             <Pagination 
             goToNextPage={nextPage ? goToNextPage : null} 
             goToPrevPage={prevPage ? goToPrevPage : null}

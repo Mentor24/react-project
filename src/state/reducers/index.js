@@ -1,8 +1,8 @@
 import {combineReducers} from "redux"
-import accountReducer from "./accountReducer"
+import tableReducer from "./tableReducer"
 
 const reducers = combineReducers({
-    account: accountReducer
+    table: tableReducer
 })
 
 export default reducers
