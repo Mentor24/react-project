@@ -1,11 +1,11 @@
-export { default as NavLogoComponent } from './NavLogoComponent'
-export { default as NavComponent } from './NavComponent'
-export { default as StyledButton } from './Button'
-export { default as StyledTextField } from './TextField'
-export { default as AboutMeComponent } from './AboutMeComponent'
-export { default as StopWatchComponent } from './StopWatchComponent'
-export { default as Pagination } from './Pagination'
-export { default as InputSelect } from './InputSelect'
-export { default as SwitchComponent } from './SwitchComponent'
-export { default as CharacterBox } from './CharacterBox'
-export { default as CharacterInfoBox } from './CharacterInfoBox'
+export {default as NavLogoComponent} from "./NavLogoComponent";
+export {default as NavComponent} from "./NavComponent";
+export {default as StyledButton} from "./Button";
+export {default as StyledTextField} from "./TextField";
+export {default as AboutMeComponent} from "./AboutMeComponent";
+export {default as StopWatchComponent} from "./StopWatchComponent";
+export {default as Pagination} from "./Pagination";
+export {default as InputSelect} from "./InputSelect";
+export {default as SwitchComponent} from "./SwitchComponent";
+export {default as CharacterBox} from "./CharacterBox";
+export {default as CharacterInfoBox} from "./CharacterInfoBox";

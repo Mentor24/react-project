@@ -1,11 +1,7 @@
-import { Navigation } from './molecules'
-
+import {Navigation} from "./molecules";
 
 const App = () => {
+     return <Navigation />;
+};
 
-  return (
-    <Navigation/>
-  )
-}
-
-export default App
+export default App;

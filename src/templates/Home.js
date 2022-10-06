@@ -1,23 +1,21 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import {Content, Elements} from '../molecules'
+import {Content, Elements} from "../molecules";
 
 const S = {
-  
-  View: styled.div`
-    display: flex;
-    flex-direction: column;
-  `,
-}
+     View: styled.div`
+          display: flex;
+          flex-direction: column;
+     `,
+};
 
 const Home = () => {
-  return (
- 
-      <S.View>
-        <Content/>
-        <Elements/>
-      </S.View>    
-  )
-}
+     return (
+          <S.View>
+               <Content />
+               <Elements />
+          </S.View>
+     );
+};
 
-export default Home
+export default Home;

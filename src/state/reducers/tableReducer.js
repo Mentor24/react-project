@@ -1,10 +1,10 @@
 const reducer = (state = [], action) => {
-    switch (action.type) {
-        case "add":
-            return action.payload
-        default:
-            return state
-    }
-}
+     switch (action.type) {
+          case "add":
+               return action.payload;
+          default:
+               return state;
+     }
+};
 
-export default reducer
+export default reducer;

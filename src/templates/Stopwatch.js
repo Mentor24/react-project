@@ -1,10 +1,7 @@
-import StopWatchComponent from '../atoms/StopWatchComponent'
+import StopWatchComponent from "../atoms/StopWatchComponent";
 
 const Stopwatch = () => {
-  
-  return (
-    <StopWatchComponent timeLeap = {1} startFrom={0}/>
-  )
-}
+     return <StopWatchComponent timeLeap={1} startFrom={0} />;
+};
 
-export default Stopwatch
+export default Stopwatch;
